@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세종대 인증 연결 테스트</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f2f5; 
+        }
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            width: 100%;
+            max-width: 400px; 
+        }
+        h2 { 
+            color: #c00; 
+            margin-top: 0;
+            margin-bottom: 24px; 
+            font-size: 1.5rem; 
+            text-align: center; 
+            font-weight: 700;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #444;
+            font-weight: 500;
+        }
+        input { 
+            width: 100%; 
+            padding: 14px; 
+            border: 1.5px solid #e1e4e8; 
+            border-radius: 8px; 
+            box-sizing: border-box; 
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #c00;
+        }
+        button { 
+            width: 100%; 
+            padding: 16px; 
+            background: #c00; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 1.1rem;
+            font-weight: 600; 
+            margin-top: 10px;
+            transition: background 0.2s, transform 0.1s;
+        }
+        button:hover { 
+            background: #a00; 
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .info-box { 
+            margin-top: 24px; 
+            padding: 16px;
+            background: #fff8f8;
+            border-left: 4px solid #c00;
+            font-size: 0.85rem; 
+            color: #555; 
+            line-height: 1.6; 
+        }
+        .warning {
+            color: #d93025;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>세종대 인증 테스트</h2>
+    
+    <!-- 대양휴머니티칼리지 로그인 엔드포인트 -->
+    <form action="https://classic.sejong.ac.kr/user/loginProcess.do" method="POST">
+        <div class="form-group">
+            <label for="userId">학번 (Student ID)</label>
+            <input type="text" id="userId" name="userId" placeholder="학번을 입력하세요" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="userPwd">비밀번호 (Password)</label>
+            <input type="password" id="userPwd" name="userPwd" placeholder="포털 비밀번호를 입력하세요" required>
+        </div>
+        <button type="submit">연결 및 로그인 테스트</button>
+    </form>
+
+    <div class="info-box">
+        <span class="warning">⚠️ 테스트 안내</span>
+        <p>1. 버튼을 누르면 세종대 공식 서버로 데이터가 전송됩니다.<br>
+           2. <b>성공 시:</b> 세종대 페이지로 이동하며 로그인이 완료됩니다.<br>
+           3. <b>실패 시:</b> "정보가 일치하지 않습니다" 등의 메시지가 표시됩니다.</p>
+        <p style="margin-top: 8px; font-size: 0.75rem; color: #888;">* 이 테스트는 API 엔드포인트의 유효성을 검증하기 위한 용도입니다.</p>
+    </div>
+</div>
+
+</body>
+</html>
