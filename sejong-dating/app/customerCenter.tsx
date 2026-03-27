@@ -16,6 +16,7 @@ import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { useUser } from '../context/UserContext';
 import { useAlert } from '../context/AlertContext';
+import { styles } from '../styles/app/customerCenter.styles';
 
 const SERVER_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -115,50 +116,3 @@ export default function CustomerCenterScreen() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#FFFFFF' },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    height: 56,
-    borderBottomWidth: 1,
-    borderBottomColor: '#F0F0F0',
-  },
-  backButton: { width: 40, height: 40, justifyContent: 'center' },
-  headerTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
-  content: { flex: 1, padding: 24 },
-  section: { marginBottom: 20 },
-  sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#333', marginBottom: 8 },
-  sectionDesc: { fontSize: 14, color: '#888', marginBottom: 16, lineHeight: 20 },
-  feedbackInput: {
-    backgroundColor: '#F5F6F8',
-    borderRadius: 12,
-    padding: 16,
-    fontSize: 15,
-    color: '#333',
-    height: 150,
-    marginBottom: 16,
-  },
-  sendButton: {
-    backgroundColor: '#FF4D6D',
-    paddingVertical: 14,
-    borderRadius: 12,
-    alignItems: 'center',
-  },
-  sendButtonText: { color: '#FFF', fontSize: 16, fontWeight: 'bold' },
-  divider: { height: 1, backgroundColor: '#F0F0F0', marginVertical: 20 },
-  creatorCard: {
-    backgroundColor: '#F8F9FA',
-    borderRadius: 16,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: '#EEE',
-  },
-  creatorHeader: { flexDirection: 'row', alignItems: 'center', marginBottom: 12, gap: 8 },
-  creatorName: { fontSize: 17, fontWeight: 'bold', color: '#333' },
-  creatorInfo: { gap: 6 },
-  creatorText: { fontSize: 14, color: '#666' },
-});

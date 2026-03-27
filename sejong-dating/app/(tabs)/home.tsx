@@ -26,6 +26,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from '../../context/UserContext';
 import { useAlert } from '../../context/AlertContext';
+import { styles } from '../../styles/app/(tabs)/home.styles';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -252,73 +253,3 @@ export default function HomeScreen() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F6F8' },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 24, paddingTop: 16, paddingBottom: 8 },
-  headerTitle: { fontSize: 24, fontWeight: '800', color: '#FF4D6D' },
-  cardWrapper: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  cardContainer: { width: SCREEN_WIDTH - 40, flex: 1, backgroundColor: '#FFFFFF', borderRadius: 24, marginTop: 16, marginBottom: 30, elevation: 8, overflow: 'hidden' },
-  cardImage: { width: '100%', height: '100%', resizeMode: 'cover', justifyContent: 'center', alignItems: 'center' },
-  infoContainer: { position: 'absolute', bottom: 0, left: 0, right: 0, padding: 24, paddingTop: 40 },
-  nameRow: { flexDirection: 'row', alignItems: 'flex-end', marginBottom: 8 },
-  name: { fontSize: 28, fontWeight: 'bold', color: '#FFFFFF', marginRight: 8, textShadowColor: 'rgba(0, 0, 0, 0.75)', textShadowOffset: {width: -1, height: 1}, textShadowRadius: 10 },
-  age: { fontSize: 22, color: '#E0E0E0', fontWeight: '500', marginBottom: 2, textShadowColor: 'rgba(0, 0, 0, 0.75)', textShadowOffset: {width: -1, height: 1}, textShadowRadius: 10 },
-  major: { fontSize: 16, color: '#FFD1DC', fontWeight: '600', marginBottom: 12, textShadowColor: 'rgba(0, 0, 0, 0.75)', textShadowOffset: {width: -1, height: 1}, textShadowRadius: 10 },
-  tagsContainer: { flexDirection: 'row', marginBottom: 16 },
-  tag: { backgroundColor: 'rgba(255, 255, 255, 0.2)', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 16, marginRight: 8, borderWidth: 1, borderColor: 'rgba(255, 255, 255, 0.3)' },
-  tagText: { color: '#FFFFFF', fontSize: 12, fontWeight: '600' },
-  bio: { fontSize: 15, color: '#F0F0F0', lineHeight: 22, textShadowColor: 'rgba(0, 0, 0, 0.75)', textShadowOffset: {width: -1, height: 1}, textShadowRadius: 5 },
-  actionContainer: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', paddingBottom: 110 },
-  actionButton: { width: 70, height: 70, borderRadius: 35, justifyContent: 'center', alignItems: 'center', marginHorizontal: 20, elevation: 6 },
-  passButton: { backgroundColor: '#FFFFFF' },
-  likeButton: { backgroundColor: '#FF4D6D' },
-  emptyText: { fontSize: 18, color: '#999', marginBottom: 20 },
-  retryButton: { padding: 12, backgroundColor: '#FF4D6D', borderRadius: 8 },
-  retryText: { color: '#FFF', fontWeight: 'bold' },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 40,
-  },
-  modalContent: {
-    width: '100%',
-    backgroundColor: '#FFF',
-    borderRadius: 20,
-    padding: 24,
-    alignItems: 'center',
-    elevation: 10,
-  },
-  modalHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 16,
-    gap: 8,
-  },
-  modalTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  modalBody: {
-    fontSize: 15,
-    color: '#666',
-    lineHeight: 22,
-    textAlign: 'center',
-    marginBottom: 24,
-  },
-  modalConfirmButton: {
-    backgroundColor: '#FF4D6D',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 12,
-  },
-  modalConfirmText: {
-    color: '#FFF',
-    fontSize: 15,
-    fontWeight: 'bold',
-  },
-});

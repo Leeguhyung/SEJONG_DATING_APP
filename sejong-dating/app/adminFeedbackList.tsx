@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useFocusEffect } from 'expo-router';
 import axios from 'axios';
 import { useAlert } from '../context/AlertContext';
+import { styles } from '../styles/app/adminFeedbackList.styles';
 
 const SERVER_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -97,47 +98,3 @@ export default function AdminFeedbackListScreen() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F8F9FA' },
-  center: { justifyContent: 'center', alignItems: 'center' },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    height: 56,
-    backgroundColor: '#FFF',
-    borderBottomWidth: 1,
-    borderBottomColor: '#EEE',
-  },
-  backButton: { width: 40, height: 40, justifyContent: 'center' },
-  headerTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
-  listContainer: { padding: 16 },
-  feedbackCard: {
-    backgroundColor: '#FFF',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 12,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-  },
-  feedbackHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#F5F5F5',
-    paddingBottom: 8,
-  },
-  studentIdText: { fontSize: 14, fontWeight: 'bold', color: '#FF4D6D' },
-  dateText: { fontSize: 12, color: '#999' },
-  contentBox: { paddingTop: 4 },
-  contentText: { fontSize: 15, color: '#333', lineHeight: 22 },
-  emptyContainer: { alignItems: 'center', marginTop: 100 },
-  emptyText: { fontSize: 15, color: '#999', marginTop: 12 },
-});

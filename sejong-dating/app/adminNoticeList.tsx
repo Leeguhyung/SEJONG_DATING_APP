@@ -12,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter, useFocusEffect } from 'expo-router';
 import axios from 'axios';
 import { useAlert } from '../context/AlertContext';
+import { styles } from '../styles/app/adminNoticeList.styles';
 
 const SERVER_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -141,48 +142,3 @@ export default function AdminNoticeListScreen() {
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F8F9FA' },
-  center: { justifyContent: 'center', alignItems: 'center' },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    height: 56,
-    backgroundColor: '#FFF',
-    borderBottomWidth: 1,
-    borderBottomColor: '#EEE',
-  },
-  backButton: { width: 40, height: 40, justifyContent: 'center' },
-  addButton: { width: 40, height: 40, justifyContent: 'center', alignItems: 'center' },
-  headerTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
-  listContainer: { padding: 16 },
-  noticeCard: {
-    flexDirection: 'row',
-    backgroundColor: '#FFF',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 12,
-    alignItems: 'center',
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-  },
-  noticeInfo: { flex: 1 },
-  titleRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 6, gap: 8 },
-  noticeTitle: { fontSize: 16, fontWeight: 'bold', color: '#333', flexShrink: 1 },
-  dateText: { fontSize: 12, color: '#999', marginTop: 2 },
-  statusBadge: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 },
-  activeBadge: { backgroundColor: '#FFF0F2' },
-  expiredBadge: { backgroundColor: '#F0F1F4' },
-  statusText: { fontSize: 10, fontWeight: 'bold' },
-  activeText: { color: '#FF4D6D' },
-  expiredText: { color: '#888' },
-  deleteButton: { padding: 8, marginLeft: 8 },
-  emptyContainer: { alignItems: 'center', marginTop: 100 },
-  emptyText: { fontSize: 15, color: '#999' },
-});

@@ -1,0 +1,58 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#FFF' },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    height: 56,
+    borderBottomWidth: 1,
+    borderBottomColor: '#F0F0F0',
+  },
+  backButton: { width: 40, height: 40, justifyContent: 'center' },
+  headerTitle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
+  content: { flex: 1, padding: 24 },
+  inputSection: { marginBottom: 24 },
+  label: { fontSize: 15, fontWeight: 'bold', color: '#555', marginBottom: 12, marginTop: 12 },
+  titleInput: {
+    backgroundColor: '#F5F6F8',
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 16,
+    color: '#333',
+  },
+  contentInput: {
+    backgroundColor: '#F5F6F8',
+    borderRadius: 12,
+    padding: 16,
+    fontSize: 15,
+    color: '#333',
+    height: 200,
+  },
+  durationContainer: { flexDirection: 'row', gap: 10, marginTop: 4 },
+  durationItem: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 12,
+    backgroundColor: '#F5F6F8',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  durationItemSelected: {
+    backgroundColor: '#FFF0F2',
+    borderColor: '#FF4D6D',
+  },
+  durationText: { fontSize: 14, color: '#888' },
+  durationTextSelected: { color: '#FF4D6D', fontWeight: 'bold' },
+  footer: { padding: 20, borderTopWidth: 1, borderTopColor: '#F0F0F0' },
+  submitButton: {
+    backgroundColor: '#FF4D6D',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  submitButtonText: { color: '#FFF', fontSize: 16, fontWeight: 'bold' },
+});
