@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
   innerContainer: { flex: 1 },
   keyboardView: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20 },
   headerContainer: { alignItems: 'center', marginBottom: 40 },
-  logoBox: { width: 60, height: 60, backgroundColor: '#2C2C2C', borderRadius: 16, justifyContent: 'center', alignItems: 'center', marginBottom: 16, elevation: 5 },
   mainTitle: { fontSize: 28, fontWeight: '800', color: '#333333', marginBottom: 8 },
   subTitle: { fontSize: 14, color: '#666666', textAlign: 'center', lineHeight: 20 },
   cardContainer: { width: '100%', backgroundColor: '#FFFFFF', borderRadius: 24, padding: 24, elevation: 8 },

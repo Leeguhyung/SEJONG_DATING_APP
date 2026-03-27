@@ -18,6 +18,7 @@ import { useAlert } from '../context/AlertContext';
 import * as SecureStore from 'expo-secure-store';
 import * as LocalAuthentication from 'expo-local-authentication';
 import { styles } from '../styles/app/index.styles';
+import { AppLogo } from '../components/AppLogo';
 
 const API_URL = `${process.env.EXPO_PUBLIC_SERVER_URL}/auth`;
 
@@ -136,9 +137,7 @@ export default function LoginScreen() {
           style={styles.keyboardView}
         >
           <View style={styles.headerContainer}>
-            <View style={styles.logoBox}>
-              <Ionicons name="school" size={32} color="#FFFFFF" />
-            </View>
+            <AppLogo size={80} style={{ marginBottom: 20 }} />
             <Text style={styles.mainTitle}>세종설렘</Text>
             <Text style={styles.subTitle}>세종대학교 학생들을 위한{'\n'}프리미엄 데이팅 앱</Text>
           </View>
